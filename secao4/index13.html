@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 04 - Aula 13</title>
+</head>
+<body>
+    <h1>Seção 04 - Aula 13</h1>
+
+    <script>
+        //Escopo de variáveis
+
+        var teste = 42; //variável global
+
+        function somar(num1, num2){
+            //Variável local (só é reconheciada dentro do bloco da função)
+            var valor = 5; //variável local
+            return valor + num1 + num2;
+        }
+
+        for(var i = 0; i < 5; i++){
+            var outra = 5; //variável global
+            console.log(i * outra);
+        }
+
+        console.log(somar(4, 6));
+
+        //console.log(valor); //reference error
+
+        console.log(outra);//temos acesso, pois foi decladara em um bloco for
+
+        console.log(i);
+        for(var j = 0; j < 5; j++){
+            let uma = 12; //variável local
+            console.log (j * uma);
+        }
+
+        //console.log(uma); //reference error
+        console.log(j);
+    </script>
+
+</body>
+</html>
